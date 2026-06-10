@@ -1,4 +1,34 @@
 /* 
+Variables
+*/
+:root {
+    /* Colors */
+    --color-primary: hsl(4, 100%, 67%);
+    --color-blue-800: hsl(234, 29%, 20%);
+    --color-blue-700: hsl(235, 18%, 26%);
+    --color-grey: hsl(0, 0%,58%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-red-200: hsl(5, 100%, 95%);
+    --color-red-500: hsl(6, 70%, 65%);
+
+    /* Font size */
+    --text-250: 2.5rem;
+    --text-100: 1rem;
+    --text-75: 0.75rem;
+
+    /* Radius */
+    --radius-100: 0.625rem;
+
+    /* Space */
+    --space-50: 0.5rem;
+    --space-100: 1rem;
+    --space-125: 1.25rem;
+    --space-150: 1.5rem;
+    --space-200: 2rem;
+    --space-775: 7.75rem;
+    --space-1650: 16.5rem;
+}
+/* 
 Footer
 */
 .attribution {
