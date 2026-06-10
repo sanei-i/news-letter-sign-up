@@ -150,6 +150,19 @@ Newsletter
 
 
 /* 
+Error
+*/
+.newsletter__error {
+    color: var(--color-red-500);
+}
+.newsletter__input--error {
+    color: var(--color-red-500);
+    background-color: var(--color-red-200);
+    border-color: var(--color-red-500);
+}
+
+
+/* 
 Thankyou
 */
 .thankyou {
