@@ -176,6 +176,16 @@ Thankyou
     background-color: var(--color-primary);
     cursor: pointer;
 }
+
+
+/* 
+Utilities
+*/
+.is-hidden {
+    display: none;
+}
+
+
 /* 
 Footer
 */
