@@ -37,9 +37,14 @@
         </ul>
 
         <form class="newsletter__form">
-          <label class="newsletter__label" for="email">
-            Email address
-          </label>
+          <div class="newsletter__header">
+            <label class="newsletter__label" for="email">
+              Email address
+            </label>
+            <span class="newsletter__error is-hidden">
+              Valid email required
+            </span>
+          </div>
           <input 
             class="newsletter__input"
             type="email" 
