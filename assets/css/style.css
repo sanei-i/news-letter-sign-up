@@ -12,12 +12,14 @@ Variables
     --color-red-500: hsl(6, 70%, 65%);
 
     /* Font size */
+    --text-350: 3.5rem;
     --text-250: 2.5rem;
     --text-100: 1rem;
     --text-75: 0.75rem;
 
     /* Radius */
     --radius-100: 0.625rem;
+    --radius-250: 2.1875rem;
 
     /* Space */
     --space-50: 0.5rem;
@@ -25,7 +27,10 @@ Variables
     --space-125: 1.25rem;
     --space-150: 1.5rem;
     --space-200: 2rem;
+    --space-250: 2.5rem;
+    --space-280: 2.875rem;
     --space-300: 3rem;
+    --space-400: 4rem;
     --space-775: 7.75rem;
     --space-1650: 16.5rem;
 }
@@ -62,7 +67,7 @@ main {
 }
 h1 {
     margin: 0;
-    font-size: var(--text-250);
+    font-size: clamp(var(--text-250), 5vw, var(--text-350));
     font-weight: 700;
     line-height: 1;
 }
@@ -74,12 +79,10 @@ ul {
     padding: 0;
     list-style: none;
 }
-input {
-    padding: 0;
-    border: none;
-}
+input,
 button {
     padding: 0;
+    font: inherit;
     border: none;
 }
 
@@ -88,6 +91,7 @@ button {
 Newsletter
 */
 .newsletter {
+    width: clamp(23.4375rem, 80vw, 58rem);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,10 +99,13 @@ Newsletter
     background-color: var(--color-white);
 }
 .newsletter__image {
+    display: block;
     width: 100%;
 }
 .newsletter__content {
-    padding: var(--space-200) var(--space-150);
+    padding-block: var(--space-200);
+    padding-inline-start: clamp(var(--space-150), 5vw, var(--space-250));
+    padding-inline-end: clamp(var(--space-150), 5vw, var(--space-400));
 }
 .newsletter__description {
     margin: var(--space-125) 0;
@@ -168,6 +175,7 @@ Error
 Thankyou
 */
 .thankyou {
+    width: clamp(23.4375rem, 80vw, 31.5rem);
     min-height: 100vh;
     padding: var(--space-300) var(--space-150) 0;
     background-color: var(--color-white);
@@ -199,6 +207,33 @@ Utilities
 */
 .is-hidden {
     display: none;
+}
+
+
+/* 
+Responsive
+*/
+@media (min-width: 48rem) {
+    .newsletter {
+        min-height: auto;
+        padding: var(--space-150);
+        flex-direction: row-reverse;
+        border-radius: var(--radius-250);
+    }
+    .thankyou {
+        min-height: auto;
+        padding: var(--space-400);
+        padding-block-start: var(--space-280);
+        border-radius: var(--radius-250);
+    }
+    .thankyou__image {
+        margin: 0;
+        margin-block-end: var(--space-250);
+    }
+    .thankyou__button {
+        margin: 0;
+        margin-block-start: var(--space-250);
+    }
 }
 
 
