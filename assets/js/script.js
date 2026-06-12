@@ -30,4 +30,7 @@ thankyouButton.addEventListener('click', function (event) {
     event.preventDefault();
     newsletterCard.classList.remove('is-hidden');
     thankyouCard.classList.add('is-hidden');
+    
+    newsletterError.classList.add('is-hidden');
+    newsletterInput.classList.remove('newsletter__input--error');
 });
